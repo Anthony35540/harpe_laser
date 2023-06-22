@@ -1,0 +1,331 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body{
+    background-color: rgb(0, 0, 0);
+} */
+h1{
+    color: gold;
+}
+#harpe{
+    background-color: rgb(0, 0, 0);
+}
+#harpe-laser{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+/* *************** LE SOCLE *************** */
+#socle{
+    background-color: rgb(28, 28, 28);
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    top: 70%;
+    left:50%;
+    margin-left: -100px;  
+    border-radius: 5px;
+    border: solid 1px gold;  
+}
+/* *************** LES RAYONS *************** */
+#rayon-center,.rayon{
+    background-color: chartreuse;
+    padding:0 1.5px ;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    bottom: 23%;
+    transform-origin: bottom; 
+}
+#rayon-left{
+    transform: rotate(-45deg);
+}
+#rayon-left-1{
+    transform: rotate(-30deg);
+}
+#rayon-left-2{
+    transform: rotate(-15deg);
+}
+#rayon-right{
+    transform: rotate(45deg);
+}
+#rayon-right-1{
+    transform: rotate(30deg);
+}
+#rayon-right-2{
+    transform: rotate(15deg);
+}
+/* *************** ACTION DES RAYONS AU CLIC *************** */
+#rayon-center:active  {
+    background-color: gold;
+    animation: vibration-center ;
+    animation-duration: .5s;
+}
+#rayon-left:active  {
+    background-color: gold;
+    animation: vibration-left ;
+    animation-duration: .5s;  
+}
+#rayon-left-1:active  {
+    background-color: gold;
+    animation: vibration-left-1 ;
+    animation-duration: .5s; 
+}
+#rayon-left-2:active  {
+    background-color: gold;
+    animation: vibration-left-2 ;
+    animation-duration: .5s;   
+}
+#rayon-right:active  {
+    background-color: gold;
+    animation: vibration-right ;
+    animation-duration: .5s;   
+}
+#rayon-right-1:active  {
+    background-color: gold;
+    animation: vibration-right-1 ;
+    animation-duration: .5s;  
+}
+#rayon-right-2:active  {
+    background-color: gold;
+    animation: vibration-right-2 ;
+    animation-duration: .5s;  
+}
+/* *************** ANNIMATION DES RAYONS AU CLIC *************** */
+@keyframes vibration-center {
+
+    0%{
+        transform: rotate(.5deg);
+        filter: blur(4px);
+    }
+    10%{
+        transform: rotate(-.5deg);
+    }
+    20%{
+        transform: rotate(.4deg);
+    }
+    30%{
+        transform: rotate(-.4deg);
+    }
+    40%{
+        transform: rotate(.3deg);
+    }
+    50%{
+        transform: rotate(-.3deg);
+    }
+    60%{
+        transform: rotate(.2deg);
+    }
+    70%{
+        transform: rotate(-.2deg);
+    }
+    80%{
+        transform: rotate(.1deg);
+    }
+    90%{
+        transform: rotate(-.1deg);
+    }
+    100%{
+        transform: rotate(0deg);
+        filter: blur(0%);
+    }
+}
+
+@keyframes vibration-left {
+
+    0%{
+        transform: rotate(-45.5deg);
+        filter: blur(4px);
+    }
+    10%{
+        transform: rotate(-44.5deg);
+    }
+    20%{
+        transform: rotate(-45.4deg);
+    }
+    30%{
+        transform: rotate(-44.4deg);
+    }
+    40%{
+        transform: rotate(-45.3deg);
+    }
+    50%{
+        transform: rotate(-44.3deg);
+    }
+    60%{
+        transform: rotate(-45.2deg);
+    }
+    70%{
+        transform: rotate(-44.2deg);
+    }
+    100%{
+        transform: rotate(-45deg);
+        filter: blur(0%);
+    }
+}
+@keyframes vibration-left-1 {
+
+    0%{
+        transform: rotate(-30.5deg);
+        filter: blur(4px);
+    }
+    10%{
+        transform: rotate(-29.5deg);
+    }
+    20%{
+        transform: rotate(-30.4deg);
+    }
+    30%{
+        transform: rotate(-29.4deg);
+    }
+    40%{
+        transform: rotate(-30.3deg);
+    }
+    50%{
+        transform: rotate(-29.3deg);
+    }
+    60%{
+        transform: rotate(-30.2deg);
+    }
+    70%{
+        transform: rotate(-29.2deg);
+    }
+    100%{
+        transform: rotate(-30deg);
+        filter: blur(0%);
+    }  
+}
+@keyframes vibration-left-2 {
+
+    0%{
+        transform: rotate(-15.5deg);
+        filter: blur(4px);
+    }
+    10%{
+        transform: rotate(-14.5deg);
+    }
+    20%{
+        transform: rotate(-15.4deg);
+    }
+    30%{
+        transform: rotate(-14.4deg);
+    }
+    40%{
+        transform: rotate(-15.3deg);
+    }
+    50%{
+        transform: rotate(-14.3deg);
+    }
+    60%{
+        transform: rotate(-15.2deg);
+    }
+    70%{
+        transform: rotate(-14.2deg);
+    }
+    100%{
+        transform: rotate(-15deg);
+        filter: blur(0%);
+    }  
+}
+@keyframes vibration-right {
+
+    0%{
+        transform: rotate(45.5deg);
+        filter: blur(4px);
+    }
+    10%{
+        transform: rotate(44.5deg);
+    }
+    20%{
+        transform: rotate(45.4deg);
+    }
+    30%{
+        transform: rotate(44.4deg);
+    }
+    40%{
+        transform: rotate(45.3deg);
+    }
+    50%{
+        transform: rotate(44.3deg);
+    }
+    60%{
+        transform: rotate(45.2deg);
+    }
+    70%{
+        transform: rotate(44.2deg);
+    }
+    100%{
+        transform: rotate(45deg);
+        filter: blur(0%);
+    }  
+}
+@keyframes vibration-right-1 {
+
+    0%{
+        transform: rotate(30.5deg);
+        filter: blur(4px);
+    }
+    10%{
+        transform: rotate(29.5deg);
+    }
+    20%{
+        transform: rotate(30.4deg);
+    }
+    30%{
+        transform: rotate(29.4deg);
+    }
+    40%{
+        transform: rotate(30.3deg);
+    }
+    50%{
+        transform: rotate(29.3deg);
+    }
+    60%{
+        transform: rotate(30.2deg);
+    }
+    70%{
+        transform: rotate(29.2deg);
+    }
+    100%{
+        transform: rotate(30deg);
+        filter: blur(0%);
+    } 
+}
+@keyframes vibration-right-2 {
+
+    0%{
+        transform: rotate(15.5deg);
+        filter: blur(4px);
+    }
+    10%{
+        transform: rotate(14.5deg);
+    }
+    20%{
+        transform: rotate(15.4deg);
+    }
+    30%{
+        transform: rotate(14.4deg);
+    }
+    40%{
+        transform: rotate(15.3deg);
+    }
+    50%{
+        transform: rotate(14.3deg);
+    }
+    60%{
+        transform: rotate(15.2deg);
+    }
+    70%{
+        transform: rotate(14.2deg);
+    }
+    100%{
+        transform: rotate(15deg);
+        filter: blur(0%);
+    }  
+}
